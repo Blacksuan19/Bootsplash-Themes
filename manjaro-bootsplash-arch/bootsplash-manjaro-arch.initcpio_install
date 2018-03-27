@@ -1,0 +1,11 @@
+build() {
+        # add tux bootsplash
+	add_binary /usr/lib/firmware/bootsplash-themes/manjaro-arch/bootsplash /usr/lib/firmware/bootsplash-themes/manjaro-arch/bootsplash
+}
+
+help() {
+	echo "This hook includes plymouth in the initramfs image."
+}
+
+# vim: set ft=sh:
+#EOF 
