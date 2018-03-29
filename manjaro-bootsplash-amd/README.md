@@ -1,5 +1,5 @@
 # Manjaro-bootsplash-amd
-Kernel Bootsplash theme for manjaro Linux using amd linux logo
+Kernel Bootsplash theme for manjaro Linux using AMD logo
 
 # Installation:
 

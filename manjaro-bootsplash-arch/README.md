@@ -1,5 +1,5 @@
 # Manjaro-bootsplash-arch
-Kernel Bootsplash theme for manjaro Linux using arch linux logo
+Kernel Bootsplash theme for manjaro Linux using Arch linux logo
 
 # Installation:
 

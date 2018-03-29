@@ -1,5 +1,5 @@
 # Manjaro-bootsplash-gnome
-Kernel Bootsplash theme for manjaro Linux using gnome linux logo
+Kernel Bootsplash theme for manjaro Linux using Gnome logo
 
 # Installation:
 
