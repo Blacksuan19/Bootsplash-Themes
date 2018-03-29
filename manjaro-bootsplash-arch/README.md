@@ -1,8 +1,6 @@
 # Manjaro-bootsplash-arch
 Kernel Bootsplash theme for manjaro Linux using arch linux logo
 
-> learn more about in kernel bootsplash [here](https://lists.freedesktop.org/archives/dri-devel/2017-December/160242.html)
-
 # Installation:
 
 - run `bootsplash-manjaro-arch.sh` to generate STL model.
