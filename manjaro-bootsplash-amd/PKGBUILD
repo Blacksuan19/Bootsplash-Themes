@@ -1,0 +1,36 @@
+pkgbase=bootsplash-themes
+pkgname=('bootsplash-theme-manjaro-amd')
+pkgver=0.2
+pkgrel=2
+url="https://lists.freedesktop.org/archives/dri-devel/2017-December/160242.html"
+arch=('x86_64')
+license=('GPL')
+
+depends=('linux415' 'systemd')
+builddepends=('imagemagick')
+options=('!libtool' '!emptydirs')
+
+source=('bootsplash-packer'
+	'bootsplash-manjaro-amd.sh'
+	'bootsplash-manjaro-amd.initcpio_install'
+	'spinner.gif'
+	'amd-logo.png')
+
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP')
+
+build() {
+  cd "$srcdir"
+  sh ./bootsplash-manjaro-amd.sh
+}
+
+package_bootsplash-theme-manjaro-amd() {
+  pkgdesc="Bootsplash Theme 'Manjaro KDE'"
+  cd "$srcdir"
+
+  install -Dm644 "$srcdir/bootsplash-manjaro-amd" "$pkgdir/usr/lib/firmware/bootsplash-themes/manjaro-amd/bootsplash"
+  install -Dm644 "$srcdir/bootsplash-manjaro-amd.initcpio_install" "$pkgdir/usr/lib/initcpio/install/bootsplash-manjaro-amd"
+} 
