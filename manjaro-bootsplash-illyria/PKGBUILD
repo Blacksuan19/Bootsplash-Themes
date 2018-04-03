@@ -1,0 +1,36 @@
+pkgbase=bootsplash-themes
+pkgname=('bootsplash-theme-manjaro-illyria')
+pkgver=0.1
+pkgrel=2
+url="https://lists.freedesktop.org/archives/dri-devel/2017-December/160242.html"
+arch=('x86_64')
+license=('GPL')
+
+depends=('linux415' 'systemd')
+builddepends=('imagemagick')
+options=('!libtool' '!emptydirs')
+
+source=('bootsplash-packer'
+	'bootsplash-manjaro-illyria.sh'
+	'bootsplash-manjaro-illyria.initcpio_install'
+	'spinner.gif'
+	'illyria.png')
+
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP')
+
+build() {
+  cd "$srcdir"
+  sh ./bootsplash-manjaro-illyria.sh
+}
+
+package_bootsplash-theme-manjaro-illyria() {
+  pkgdesc="Bootsplash Theme 'Manjaro KDE'"
+  cd "$srcdir"
+
+  install -Dm644 "$srcdir/bootsplash-manjaro-illyria" "$pkgdir/usr/lib/firmware/bootsplash-themes/manjaro-illyria/bootsplash"
+  install -Dm644 "$srcdir/bootsplash-manjaro-illyria.initcpio_install" "$pkgdir/usr/lib/initcpio/install/bootsplash-manjaro-illyria"
+} 
