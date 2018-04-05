@@ -1,5 +1,5 @@
 pkgbase=bootsplash-themes
-pkgname=('bootsplash-theme-manjaro-illyria')
+pkgname=('bootsplash-manjaro-illyria')
 pkgver=0.1
 pkgrel=2
 url="https://lists.freedesktop.org/archives/dri-devel/2017-December/160242.html"
@@ -27,7 +27,7 @@ build() {
   sh ./bootsplash-manjaro-illyria.sh
 }
 
-package_bootsplash-theme-manjaro-illyria() {
+package_bootsplash-manjaro-illyria() {
   pkgdesc="Bootsplash Theme 'Manjaro KDE'"
   cd "$srcdir"
 
