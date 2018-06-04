@@ -28,7 +28,7 @@ build() {
 }
 
 package_bootsplash-manjaro-illyria() {
-  pkgdesc="Bootsplash Theme 'Manjaro KDE'"
+  pkgdesc="Bootsplash Theme with Manjaro illyria logo"
   cd "$srcdir"
 
   install -Dm644 "$srcdir/bootsplash-manjaro-illyria" "$pkgdir/usr/lib/firmware/bootsplash-themes/manjaro-illyria/bootsplash"

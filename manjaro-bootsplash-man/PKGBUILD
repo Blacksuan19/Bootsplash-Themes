@@ -28,7 +28,7 @@ build() {
 }
 
 package_bootsplash-theme-manjaro-man() {
-  pkgdesc="Bootsplash Theme 'Manjaro KDE'"
+  pkgdesc="Bootsplash Theme Manjaro white logo"
   cd "$srcdir"
 
   install -Dm644 "$srcdir/bootsplash-manjaro-man" "$pkgdir/usr/lib/firmware/bootsplash-themes/manjaro-man/bootsplash"

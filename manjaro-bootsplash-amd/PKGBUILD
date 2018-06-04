@@ -28,7 +28,7 @@ build() {
 }
 
 package_bootsplash-theme-manjaro-amd() {
-  pkgdesc="Bootsplash Theme 'Manjaro KDE'"
+  pkgdesc="Bootsplash Theme With AMD logo"
   cd "$srcdir"
 
   install -Dm644 "$srcdir/bootsplash-manjaro-amd" "$pkgdir/usr/lib/firmware/bootsplash-themes/manjaro-amd/bootsplash"

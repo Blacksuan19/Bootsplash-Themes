@@ -28,7 +28,7 @@ build() {
 }
 
 package_bootsplash-theme-manjaro-arch() {
-  pkgdesc="Bootsplash Theme 'Manjaro KDE'"
+  pkgdesc="Bootsplash Theme with Arch logo"
   cd "$srcdir"
 
   install -Dm644 "$srcdir/bootsplash-manjaro-arch" "$pkgdir/usr/lib/firmware/bootsplash-themes/manjaro-arch/bootsplash"
