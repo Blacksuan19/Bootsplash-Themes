@@ -1,0 +1,36 @@
+pkgbase=bootsplash-themes
+pkgname=('bootsplash-theme-manjaro-tux')
+pkgver=0.2
+pkgrel=2
+url="https://lists.freedesktop.org/archives/dri-devel/2017-December/160242.html"
+arch=('x86_64')
+license=('GPL')
+
+depends=()
+builddepends=('imagemagick')
+options=('!libtool' '!emptydirs')
+
+source=('bootsplash-packer'
+	'bootsplash-manjaro-tux.sh'
+	'bootsplash-manjaro-tux.initcpio_install'
+	'spinner.gif'
+	'tux-logo.png')
+
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP')
+
+build() {
+  cd "$srcdir"
+  sh ./bootsplash-manjaro-tux.sh
+}
+
+package_bootsplash-theme-manjaro-tux() {
+  pkgdesc="Bootsplash Theme With Tux logo"
+  cd "$srcdir"
+
+  install -Dm644 "$srcdir/bootsplash-manjaro-tux" "$pkgdir/usr/lib/firmware/bootsplash-themes/manjaro-tux/bootsplash"
+  install -Dm644 "$srcdir/bootsplash-manjaro-tux.initcpio_install" "$pkgdir/usr/lib/initcpio/install/bootsplash-manjaro-tux"
+}
